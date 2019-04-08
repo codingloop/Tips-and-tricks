@@ -1,0 +1,71 @@
+Init Part:
+-------------------------------------------------------------------------------------------------------
+1. git init => Initialize the repository
+2. git status => Check status of repo, list untracked and ready to commit files
+3. git add filename => Add file to repository and it will be ready to commit (called staging)
+   a. git add . ==> Adds everything in the repo(also wildcards can be used ex: git add *.html)
+4. git commit => To commit the changes
+  a. Enter commit message
+  b. After entring msg press 'ESC' and type ':wq' and then hit enter
+  OR
+  a. git commit -m 'message' => skips advanced screen
+5. git log  => See all commit logs to the repo
+6. Create ignore file: create normal text file and then rename to .gitignore
+   ( ex: ren gitignore.txt .gitignore )
+   - In ignore file mention files to be ignored
+   (ex: *.log )
+7. git branch branch_name ==> Create a branch
+8. git checkout branchname  ==> Swith to branch
+9. git merge branchname ===> merge from branch
+10. git commit -a -m 'change without add' ==> Commit without staging
+11. git mergetool  => Open mergetool
+
+$ git remote add origin remote repository URL
+# Sets the new remote
+$ git remote -v
+# Verifies the new remote URL
+
+$ git push origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+-----------------------------------------------------------------------------------------------------------
+
+
+First step: Give remote repo name manually
+git remote add origin https://github.com/Ishwar-Bhat/tester.git
+git push -u origin master
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/Ishwar-Bhat/tester.git
+git push -u origin master
+
+
+Forced update:
+ git push -f origin master
+ 
+
+After commit and merge update local rep:
+git fetch origin
+git reset --hard origin/master
+----------------------------------------------------------------------------------------------------------------
+Adding another git account in same laptop:
+
+1. Generate ssh key
+-> ssh-keygen -t rsa
+or
+-> ssh-keygen -t rsa -C "email@work_mail.com" -f "id_rsa_work_user1"
+   Give some passphrase if you want
+
+2. Add ssh key in Git account settings
+
+3. Edit git config and add ssh-key
+-> git config -e
+   Add below line in [core] section
+  sshCommand = ssh -i path_of_ssh_key
+  [~/.ssh/id_ra_test => users/currentuser/.ssh/ssh_key_file]
+
+4. Set user for the repository
+-> git config user.name "Killer-I"
+-> git config user.email "ishunfs@gmail.com"
+
+Done!..
+-----------------------------------------------------------------------------------
