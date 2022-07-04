@@ -47,6 +47,11 @@ After commit and merge update local rep:
 git fetch origin
 git reset --hard origin/master
 ----------------------------------------------------------------------------------------------------------------
+Make git file executable
+1. git update-index --chmod=+x file_name
+2. git commit -m "Commit message"
+3. git push
+----------------------------------------------------------------------------------------------------------------
 Adding another git account in same laptop:
 
 1. Generate ssh key
