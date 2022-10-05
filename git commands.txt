@@ -27,6 +27,9 @@ $ git remote -v
 
 $ git push origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
+
+# Push to multiple repos
+$git remote set-url --add --push origin https://url.....  => Pushing to multiple remotes
 -----------------------------------------------------------------------------------------------------------
 
 
