@@ -7,3 +7,17 @@
 ## Django app location in elastic beanstalk:
 `/var/app/current`
  
+### Adding file in ELB extendion file:
+'''
+files:
+    "/etc/nginx/conf.d/elasticbeanstalk/0099_static.conf":
+        mode: "000644"
+        owner: root
+        group: root
+        content: |
+            multiline
+            location /static {
+                alias /var/app/current/static;
+                access_log off;
+            }
+'''            
