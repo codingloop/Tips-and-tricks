@@ -8,7 +8,7 @@
 `/var/app/current`
  
 ### Adding file in ELB extendion file:
-'''
+```
 files:
     "/etc/nginx/conf.d/elasticbeanstalk/0099_static.conf":
         mode: "000644"
@@ -20,4 +20,4 @@ files:
                 alias /var/app/current/static;
                 access_log off;
             }
-'''            
+```           
