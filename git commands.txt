@@ -61,6 +61,8 @@ git commit --amend --reset-author --no-edit
 remove commit:
 git reset --hard HEAD^1 (resets by 1 commit)
 ----------------------------------------------------------------------------------------------------------------
+Find commits of a file
+git log --follow -p -- file_name
 ----------------------------------------------------------------------------------------------------------------
 Adding another git account in same laptop:
 
