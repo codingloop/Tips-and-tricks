@@ -9,4 +9,5 @@ Above command will create file2 link which is pointing to file
 
 #### 3. Uninstall application completely from linux
 `apt-get remove --purge packagename` => Removes the package and delete the files associated
+
 `apt-get autoremove --purge` => Removes the orphaned packages and deletes the files
