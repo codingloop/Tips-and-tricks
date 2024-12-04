@@ -64,6 +64,11 @@ docker volume prune
 docker network prune
 ```
 
+- Remove build cache
+```
+docker builder prune
+```
+
 ### 2. Cleanup specific resource
 - Remove a Specific Container
 ```
