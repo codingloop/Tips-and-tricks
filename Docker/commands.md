@@ -1,7 +1,40 @@
 ## 1. **Inspecting**
-- **View file system**
+### 1. Overview
+- **View overall memory usage**
 ```
 docker system df
+```
+
+### 2. Images
+- **List images**
+```
+docker images
+```
+
+- **Show All Images (Including Dangling Images)**
+```
+docker images -a
+```
+
+- **Filter dangling images (unreferenced images)**
+```
+docker images -f dangling=true
+```
+
+### 3. Containers
+- **List of all running containers:**
+```
+docker ps
+```
+
+- **All containers (including stopped ones):**
+```
+docker ps -a
+```
+
+- **View real-time memory and CPU usage for all running containers**
+```
+docker stats
 ```
 
 ## 2. **Cleanup**
